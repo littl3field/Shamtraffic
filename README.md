@@ -19,9 +19,9 @@ Pip install scrapy
 ```
 
 Run: 
-    
+```    
 scrapy crawl <spider-name>
-
+```
 Spiders:
 
 ##malicious_traffic_gen
