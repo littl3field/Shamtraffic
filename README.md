@@ -1,12 +1,46 @@
+# Shamtraffic
 
 
-           ________  ___  ___  ________  _____ ______   _________  ________  ________  ________ ________ ___  ________     
-          |\   ____\|\  \|\  \|\   __  \|\   _ \  _   \|\___   ___\\   __  \|\   __  \|\  _____\\  _____\\  \|\   ____\    
-          \ \  \___|\ \  \\\  \ \  \|\  \ \  \\\__\ \  \|___ \  \_\ \  \|\  \ \  \|\  \ \  \__/\ \  \__/\ \  \ \  \___|    
-           \ \_____  \ \   __  \ \   __  \ \  \\|__| \  \   \ \  \ \ \   _  _\ \   __  \ \   __\\ \   __\\ \  \ \  \       
-             \|____|\  \ \  \ \  \ \  \ \  \ \  \    \ \  \   \ \  \ \ \  \\  \\ \  \ \  \ \  \_| \ \  \_| \ \  \ \  \____  
-               ____\_\  \ \__\ \__\ \__\ \__\ \__\    \ \__\   \ \__\ \ \__\\ _\\ \__\ \__\ \__\   \ \__\   \ \__\ \_______\
-               |\_________\|__|\|__|\|__|\|__|\|__|     \|__|    \|__|  \|__|\|__|\|__|\|__|\|__|    \|__|    \|__|\|_______|
-                \|_________|                                                                                                  
-                                                                                                                 
-                                                                                                                 
+
+           ███████╗██╗  ██╗ █████╗ ███╗   ███╗████████╗██████╗  █████╗ ███████╗███████╗██╗ ██████╗
+           ██╔════╝██║  ██║██╔══██╗████╗ ████║╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██╔════╝██║██╔════╝
+           ███████╗███████║███████║██╔████╔██║   ██║   ██████╔╝███████║█████╗  █████╗  ██║██║     
+           ╚════██║██╔══██║██╔══██║██║╚██╔╝██║   ██║   ██╔══██╗██╔══██║██╔══╝  ██╔══╝  ██║██║     
+           ███████║██║  ██║██║  ██║██║ ╚═╝ ██║   ██║   ██║  ██║██║  ██║██║     ██║     ██║╚██████╗
+           ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝     ╚═╝ ╚═════╝
+           is a Scrapy tool to generate malicious traffic 
+           
+# Info 
+
+Prep:
+
+```
+Pip install scrapy
+```
+
+Run: 
+    
+scrapy crawl <spider-name>
+
+Spiders:
+
+##malicious_traffic_gen
+collectmalsites - Compile a list of malicious sites (you don't need to run this spider everytime. 
+                  Once you've got a list you'll only want to re-run it if you want to update the list.
+
+crawlmalsites - Activate the spider. It will make requests to malicious sites and download files
+
+##traffic_gen
+collecttopsites - Compile a list of the top sites (see: collectmalsites)
+
+crawltopsites - Active the spider. It'll make requests and download files.
+
+Files:
+Downloaded files will appear in a 'download_files' folder in the respective directories
+The compiled site names will appear in the files 'file_of_sites.txt' in the respective directories
+The settings for each can be found in the global_variables file in the respective directories
+
+***WARNING***
+Make sure that you're running the malicious spider in a virtual machine or the sandbox. 
+It will start making automatic requests to malicious domains.
+                                                                                       
